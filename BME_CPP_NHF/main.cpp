@@ -1,33 +1,33 @@
 #include <iostream>
 #include <cmath>
+#include "memtrace.h"
+
 #include "ingredient.h"
 #include "recipe.h"
+#include "ingredientMap.h"
 
 using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "");
-    Ingredient sugar         = Ingredient("Cukor", "g", 1000);
-    Ingredient cayannePepper = Ingredient("Cayanne Bors", "g", 50);
-    Ingredient milk          = Ingredient("Tej", "l", 5);
-    Ingredient apple         = Ingredient("Alma", "db", 10);
+    Ingredient sugar  = Ingredient("Sugar", "g", 1000);
+    Ingredient lofasz = Ingredient("lofasz", "db", 10);
+    Ingredient lohugy = Ingredient("lohugy", "l", 0);
+    
+    IngredientMap map;
 
-    cout << "van 250g cukor: " << sugar.isThereSome(250) << endl;
-    cout << "van 11db alma: " << apple.isThereSome(11) << endl;
+    map.addNewIngredient(sugar, 500);
+    map.addNewIngredient(lofasz, 1);
+    map.addNewIngredient(lohugy, 6);
 
-    try
+    cout << "Amount needed: " << map[0].getAmountNeeded() << endl;
+    cout << "Amount needed: " << map[1].getAmountNeeded() << endl;
+
+    for (IngredientMap::iterator i1 = map.begin(); i1 != map.end(); ++i1)
     {
-        cout << "Próbáljunk meg elvenni 5 db almát!" << endl;
-        apple.takeSome(5);
-        cout << "Nincs hiba." << endl;
-        cout << "Próbáljunk meg elvenni 7 db almát! Reméljük hibát okoz," << endl;
-        apple.takeSome(7);
-        cout << "Ez ne írodjon ki :)" << endl;
+        cout << ((*i1).getIngredient())->getName().c_str() << endl;
+
+        cout << i1->getIngredient()->isThereSome() << endl;
     }
-    catch (const char* error)
-    {
-        cout << "És bizony hiba jött:" << endl;
-        cout << error;
-    }
+
 }

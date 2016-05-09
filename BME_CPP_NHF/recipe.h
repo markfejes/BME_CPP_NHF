@@ -10,7 +10,7 @@ public:
     Recipe(std::string name, std::string description) : name(name), description(description) {};
     ~Recipe();
 
-    void canWeCookSome();
-    void cookSome(int amount);
+    void canWeCookSome(int);
+    void cookSome(int);
 };
 

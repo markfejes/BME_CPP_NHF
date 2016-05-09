@@ -30,6 +30,9 @@
     <ClCompile Include="ingredientMap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="memtrace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="recipeBook.h">
@@ -42,6 +45,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ingredientMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memtrace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ingredientPair.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

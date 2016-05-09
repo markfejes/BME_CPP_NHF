@@ -18,7 +18,7 @@ public:
     Ingredient(const std::string name, const std::string unit, double initAmount = 0 ) : name    (name)
                                                                                        , unit    (unit)
                                                                                        , inStock (initAmount) {};
-    bool isThereSome(double amount) const { return amount <= inStock; };
+    bool isThereSome(double amount = 0) const;
 
     void takeSome(double amount);
 

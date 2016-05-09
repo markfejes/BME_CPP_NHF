@@ -1,7 +1,17 @@
 #include <iostream>
 #include <cmath>
+#include "memtrace.h"
 #include "ingredient.h"
 
+bool Ingredient::isThereSome(double amount) const
+{
+    if (amount == 0)
+    {
+        return inStock > 0;
+    }
+
+    return amount <= inStock;
+}
 
 void Ingredient::takeSome(double amount)
 {
