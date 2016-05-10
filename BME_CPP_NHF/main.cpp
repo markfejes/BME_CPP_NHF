@@ -1,21 +1,22 @@
 #include <iostream>
-#include <cmath>
 #include "memtrace.h"
 
 #include "ingredient.h"
 #include "recipe.h"
 #include "ingredientMap.h"
+#include "ingredientPair.h"
 
 using namespace std;
 
 int main()
 {
-    Ingredient sugar  = Ingredient("Sugar", "g", 1000);
-    Ingredient lofasz = Ingredient("lofasz", "db", 10);
-    Ingredient lohugy = Ingredient("lohugy", "l", 0);
+    auto sugar  = new Ingredient("Sugar", "g", 1000);
+    auto lofasz = new Ingredient("lofasz", "db", 10);
+    auto lohugy = new Ingredient("lohugy", "l", 0);
+    auto uborka = new Ingredient("uborka", "db", 10);
     
     IngredientMap map;
-
+        
     map.addNewIngredient(sugar, 500);
     map.addNewIngredient(lofasz, 1);
     map.addNewIngredient(lohugy, 6);
@@ -23,11 +24,13 @@ int main()
     cout << "Amount needed: " << map[0].getAmountNeeded() << endl;
     cout << "Amount needed: " << map[1].getAmountNeeded() << endl;
 
-    for (IngredientMap::iterator i1 = map.begin(); i1 != map.end(); ++i1)
-    {
-        cout << ((*i1).getIngredient())->getName().c_str() << endl;
+    auto test = Recipe("lofaszos krumpli", "egy kis lofasz, krumplival megkenve");
 
-        cout << i1->getIngredient()->isThereSome() << endl;
-    }
+    cout << test << endl;
+
+    delete sugar;
+    delete lofasz;
+    delete lohugy;
+    delete uborka;
 
 }

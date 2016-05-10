@@ -1,7 +1,7 @@
 #pragma once
-#include "memtrace.h"
 
-#include "ingredientPair.hpp"
+#include "ingredient.h"
+#include "ingredientPair.h"
 
 class IngredientMap
 {
@@ -21,17 +21,19 @@ public:
         return iterator(*this, sizeOfMap);
     }
 
-    IngredientMap()
-    {
-        sizeOfMap = 0;
-    }
+    IngredientMap() : ingredientMap(nullptr), sizeOfMap(0) {}
 
     ~IngredientMap()
     {
         delete[] ingredientMap;
-    };
+    }
 
-    void addNewIngredient (Ingredient& ingredient, double amount);
+    bool isEmpty() const
+    {
+        return sizeOfMap == 0;
+    }
+
+    void addNewIngredient (Ingredient* ingredient, double amount);
     
     IngredientPair& operator[](int index);
 
@@ -40,7 +42,8 @@ public:
         IngredientPair *p, *pe;
 
     public:
-        iterator() : p(0), pe(0) {};
+        iterator() : p(nullptr), pe(nullptr) {};
+
         iterator(IngredientMap& curr, size_t size = 0) : p(curr.ingredientMap + size), pe(curr.ingredientMap + curr.sizeOfMap) {};
         
         iterator& operator++()
@@ -49,7 +52,7 @@ public:
             return *this;
         }
 
-        bool operator!=(const iterator& i)
+        bool operator!=(const iterator& i) const
         {
             return (p != i.p);
         }

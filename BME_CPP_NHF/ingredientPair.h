@@ -1,7 +1,4 @@
 #pragma once
-#include "memtrace.h"
-
-#include "ingredient.h"
 
 class IngredientPair
 {
@@ -25,3 +22,4 @@ public:
     }
 };
 
+std::ostream& operator<<(std::ostream& os, IngredientPair & rhs_IP);

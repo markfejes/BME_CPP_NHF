@@ -27,5 +27,8 @@ public:
     std::string getUnit() const { return unit; };
 
     std::string getName() const { return name; };
+
+    bool operator==(const Ingredient& rhs_ingredient) const;
+    bool Ingredient::operator!=(const Ingredient& rhs_ingredient) const;
 };
 
