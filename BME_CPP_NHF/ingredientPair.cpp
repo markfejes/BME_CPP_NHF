@@ -5,6 +5,13 @@
 
 std::ostream& operator<<(std::ostream& os, IngredientPair & rhs_IP)
 {
-    os << rhs_IP.getIngredient()->getName() << ": " << rhs_IP.getAmountNeeded() << rhs_IP.getIngredient()->getUnit();
+    os << rhs_IP.getIngredient();
     return os;
+}
+
+std::istream& operator>>(std::istream& is, IngredientPair& rhs_IP)
+{
+
+
+    return is;
 }

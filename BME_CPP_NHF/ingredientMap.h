@@ -3,6 +3,7 @@
 #include "ingredient.h"
 #include "ingredientPair.h"
 
+/*std::map alapu tarolo osszetevoknek*/
 class IngredientMap
 {
     IngredientPair* ingredientMap;
@@ -33,10 +34,12 @@ public:
         return sizeOfMap == 0;
     }
 
+    /* Uj paros hozzaadasa */
     void addNewIngredient (Ingredient* ingredient, double amount);
     
     IngredientPair& operator[](int index);
 
+    /* Standard iterator a hozzavalok konnyebb listazasa erdekeben*/
     class iterator
     {
         IngredientPair *p, *pe;

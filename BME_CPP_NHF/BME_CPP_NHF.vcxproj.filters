@@ -36,6 +36,9 @@
     <ClCompile Include="ingredientPair.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="refrigerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="recipeBook.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ingredientPair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="refrigerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

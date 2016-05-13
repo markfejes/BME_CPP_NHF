@@ -99,10 +99,11 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);MEMTRACE</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -153,6 +154,7 @@
     <ClCompile Include="memtrace.cpp" />
     <ClCompile Include="recipe.cpp" />
     <ClCompile Include="recipeBook.cpp" />
+    <ClCompile Include="refrigerator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ingredient.h" />
@@ -161,6 +163,7 @@
     <ClInclude Include="memtrace.h" />
     <ClInclude Include="recipe.h" />
     <ClInclude Include="recipeBook.h" />
+    <ClInclude Include="refrigerator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

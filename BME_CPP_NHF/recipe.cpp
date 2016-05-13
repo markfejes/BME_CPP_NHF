@@ -2,6 +2,7 @@
 #include "memtrace.h"
 #include "recipe.h"
 
+
 bool Recipe::canWeCookSome(int amount)
 {
     if (ingredientsNeeded.isEmpty())
@@ -21,12 +22,14 @@ bool Recipe::canWeCookSome(int amount)
     return true;
 }
 
+
+
 void Recipe::cookSome(int amount)
 {
     if (this->canWeCookSome(amount) == false)
     {
         std::stringstream err;
-        err << "There are not enough ingredients to make " << amount << " " << name;
+        err << "There are not enough ingredients to make " << amount << " of " << name;
         throw err.str();
     }
 
