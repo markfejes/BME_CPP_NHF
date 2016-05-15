@@ -23,7 +23,6 @@ bool Recipe::canWeCookSome(int amount)
 }
 
 
-
 void Recipe::cookSome(int amount)
 {
     if (this->canWeCookSome(amount) == false)
@@ -39,8 +38,16 @@ void Recipe::cookSome(int amount)
     }
 }
 
-std::ostream& operator<<(std::ostream& os, const Recipe& rhs_recipe)
+std::ostream& operator<<(std::ostream& os, Recipe& rhs_recipe)
 {
-    os << rhs_recipe.name;
+    os << rhs_recipe.name << std::endl << rhs_recipe.description << std::endl << rhs_recipe.ingredientsNeeded;
     return os;
+}
+
+std::istream& operator>>(std::istream& is, Recipe& rhs_recipe)
+{
+    std::getline(is, rhs_recipe.name);
+    std::getline(is, rhs_recipe.description);
+    is >> rhs_recipe.ingredientsNeeded;
+    return is;
 }

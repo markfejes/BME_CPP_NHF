@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="74a19a04-75e8-4e4b-9a07-be8f97cb1f4b" name="NHF_UML" linkedPackageId="b9f51db7-bc51-4660-912c-32aa6b9f7ea6" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="f3303163-3260-48aa-b087-d70a3fcd0cb6">
+      <profileInstance Id="2b86fc59-e73d-4bac-9e03-59109af4e4cf" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="6ecfc42a-a032-4e7e-a460-5aafa916d895">
+      <profileInstance Id="6e2c886b-61d2-48e2-877d-2eb3546a6e87" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="57084fbd-0caa-4def-80e5-99535ddcc3c9" name="RecipeBook" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c360db9b-6f3a-4b85-85a2-66f49bf11fae" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="695439b9-3637-4ee6-8b3c-c72d64c1d1cd" name="Recipe" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a9310efb-dad3-484c-890b-dc7dc98e4527" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="b9f51db7-bc51-4660-912c-32aa6b9f7ea6" name="NHF">
+    <elementDefinition Id="a94f0df2-d8c5-4d7c-8a40-037dc3532a3d" />
+  </package>
+</logicalClassDesignerModel>

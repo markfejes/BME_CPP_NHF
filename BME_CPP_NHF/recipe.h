@@ -1,6 +1,7 @@
 #pragma once
-
+#include <iostream>
 #include "ingredientMap.h"
+
 
 /** Recept osztaly*/
 class Recipe
@@ -9,9 +10,8 @@ class Recipe
     std::string description;
     IngredientMap ingredientsNeeded;
 
-
 public:
-    Recipe(std::string name, std::string description) : name(name), description(description) {};
+    Recipe(std::string name = "", std::string description = "") : name(name), description(description) {};
     
     /** Ellenorizzuk, hogy el tudunk-e kesziteni megadott mennyiseget. */
     bool canWeCookSome(int amount = 1);
@@ -39,10 +39,13 @@ public:
         this->description = desc;
     }
 
+	std::string& getName() { return name; };
+	std::string& getDesc() { return description; };
 
-    friend std::ostream& operator<<(std::ostream& os, const Recipe& rhs_recipe);
-
+    friend std::ostream& operator<<(std::ostream& os, Recipe& rhs_recipe);
+    friend std::istream& operator>>(std::istream& is, Recipe& rhs_recipe);
 };
 
-/** Megkonnyitjuk a recept nevenek kiirasat*/
-std::ostream& operator<<(std::ostream& os, const Recipe& rhs_recipe);
+/** Read/Write */
+std::ostream& operator<<(std::ostream& os, Recipe& rhs_recipe);
+std::istream& operator>>(std::istream& is, Recipe& rhs_recipe);

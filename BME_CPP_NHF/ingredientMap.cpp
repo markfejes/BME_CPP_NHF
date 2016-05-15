@@ -40,6 +40,7 @@ std::ostream& operator<<(std::ostream& os, IngredientMap& rhs_ingredient_map)
         os << *iter << std::endl;
     }
 
+    os << std::endl;
     return os;
 }
 
@@ -49,7 +50,7 @@ std::istream& operator>>(std::istream& is, IngredientMap& rhs_ingredient_map)
     std::string inputStr;
     IngredientPair temp;
 
-    while (std::getline(is, inputStr))
+    while (std::getline(is, inputStr) && inputStr.length() > 0)
     {
         input.str(inputStr);
 

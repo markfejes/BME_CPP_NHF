@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="NHF_UML">
+  <logicalClassDesignerModelMoniker Id="74a19a04-75e8-4e4b-9a07-be8f97cb1f4b" />
+  <nestedChildShapes>
+    <classShape Id="d63b1c1d-f45a-49eb-9764-9156a8da4509" absoluteBounds="1.25, 1.875, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="57084fbd-0caa-4def-80e5-99535ddcc3c9" LastKnownName="RecipeBook" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="aa60c73f-c8ef-43fc-adea-0be7caff3070" absoluteBounds="1.265, 2.265, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="1cb743a3-ea8d-4424-aff3-cb5b425a2688" absoluteBounds="1.265, 2.4761718675494193, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="306afcb7-9590-4696-8f75-3b3829cb0cec" absoluteBounds="5, 2.125, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="695439b9-3637-4ee6-8b3c-c72d64c1d1cd" LastKnownName="Recipe" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="656ebe6f-04cf-4115-bd85-5d7e5930c701" absoluteBounds="5.0150000000000006, 2.515, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="e0921c69-b2c3-47c1-aa9b-874c9b5d7192" absoluteBounds="5.0150000000000006, 2.7261718675494193, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

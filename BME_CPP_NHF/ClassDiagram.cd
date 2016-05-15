@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Ingredient">
+    <Position X="4.25" Y="0.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>CACABAAAAAAgAAAAAAEIAQAAAAgEAABAAAAEAgAgAAA=</HashCode>
+      <FileName>ingredient.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IngredientMap">
+    <Position X="15" Y="0.5" Width="4.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="IngredientMap::iterator">
+        <TypeIdentifier>
+          <NewMemberFileName>ingredientMap.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAACAQACAAAAAAAAAAAAAAAQAAEAAAAAAAAAQAAEQgA=</HashCode>
+      <FileName>ingredientMap.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IngredientPair">
+    <Position X="6.25" Y="4.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAQAAAiAAAAAIAAAAAAAA=</HashCode>
+      <FileName>ingredientPair.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Recipe">
+    <Position X="0.5" Y="4.75" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEABAAAAAAAgAIAAAAAEAAAAECAAAAAAAQAAQAAA=</HashCode>
+      <FileName>recipe.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RecipeBook">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAQAAAAIAgAIIABAAAAAAQAAAACAAAAgACAAA=</HashCode>
+      <FileName>recipeBook.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Refrigerator">
+    <Position X="9.25" Y="0.75" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAIAQAAQAAAgAAAAAAAQgAAAAA=</HashCode>
+      <FileName>refrigerator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
