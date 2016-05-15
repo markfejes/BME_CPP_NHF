@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include "memtrace.h"
 #include "recipeBook.h"
 
@@ -62,20 +63,37 @@ void RecipeBook::writeRecipes(std::ostream& os)
 {
 	for (size_t i = 0; i < numberOfRecipes; i++)
 	{
+        os << recipes[i].getName() << std::endl;
+        os << recipes[i].getDesc() << std::endl;
 		os << recipes[i];
 	}
 }
 
+
 void RecipeBook::readRecipes(std::istream& is)
 {
-    while (is.peek() != '\n' && (is >> addNewRecipe()))
+    while(is.peek() != EOF)
     {
-        if (recipes[numberOfRecipes - 1].getName() == "")
-        {
-            numberOfRecipes--;
-        }
+        std::string name, desc;
+
+        std::getline(is, name);
+        std::getline(is, desc);
+
+        is >> (addNewRecipe(name, desc));
     }
 }
+
+
+//void RecipeBook::readRecipes(std::istream& is)
+//{
+//    while (is.peek() != '\n' && (is >> addNewRecipe()))
+//    {
+//        if (recipes[numberOfRecipes - 1].getName() == "")
+//        {
+//            numberOfRecipes--;
+//        }
+//    }
+//}
 
 void RecipeBook::readSavedRecipes()
 {

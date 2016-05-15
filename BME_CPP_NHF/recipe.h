@@ -39,6 +39,11 @@ public:
         this->description = desc;
     }
 
+    IngredientMap& getIngredientsNeeded()
+    {
+        return ingredientsNeeded;
+    }
+
 	std::string& getName() { return name; };
 	std::string& getDesc() { return description; };
 
