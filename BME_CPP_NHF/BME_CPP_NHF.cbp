@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="BME_CPP_NHF" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug Win32">
+				<Option output="BME_CPP_NHF" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-DMEMTRACE" />
+				</Compiler>
+			</Target>
+			<Target title="Debug x64">
+				<Option output="BME_CPP_NHF" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-D_DEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-DMEMTRACE" />
+				</Compiler>
+			</Target>
+			<Target title="Release x64">
+				<Option output="BME_CPP_NHF" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DNDEBUG" />
+					<Add option="-D_CONSOLE" />
+				</Compiler>
+			</Target>
+			<Target title="Release Win32">
+				<Option output="BME_CPP_NHF" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_CONSOLE" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Unit filename="ClassDiagram.cd" />
+		<Unit filename="ingredient.cpp" />
+		<Unit filename="ingredient.h" />
+		<Unit filename="ingredientMap.cpp" />
+		<Unit filename="ingredientMap.h" />
+		<Unit filename="ingredientPair.cpp" />
+		<Unit filename="ingredientPair.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="memtrace.cpp" />
+		<Unit filename="memtrace.h" />
+		<Unit filename="recipe.cpp" />
+		<Unit filename="recipe.h" />
+		<Unit filename="recipeBook.cpp" />
+		<Unit filename="recipeBook.h" />
+		<Unit filename="recipes.dat" />
+		<Unit filename="refrigerator.cpp" />
+		<Unit filename="refrigerator.dat" />
+		<Unit filename="refrigerator.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

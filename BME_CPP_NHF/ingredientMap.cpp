@@ -10,7 +10,7 @@ void IngredientMap::addNewIngredient(Ingredient* ingredient, double amount)
 {
     IngredientPair* tempArray = new IngredientPair[this->sizeOfMap + 1];
 
-    if (this->sizeOfMap != 0)
+    if (sizeOfMap != 0)
     {
         for (size_t i = 0; i < sizeOfMap; i++)
         {
@@ -22,9 +22,8 @@ void IngredientMap::addNewIngredient(Ingredient* ingredient, double amount)
     tempArray[this->sizeOfMap].getAmountNeeded() = amount;
 
     delete[] this->ingredientMap;
-    this->ingredientMap = tempArray;
-    this->sizeOfMap++;
-
+    ingredientMap = tempArray;
+	sizeOfMap++;
 }
 
 IngredientPair& IngredientMap::operator[] (size_t index)
@@ -55,7 +54,7 @@ std::istream& operator>>(std::istream& is, IngredientMap& rhs_ingredient_map)
         input.str(inputStr);
 
         input >> temp;
-        
+
         rhs_ingredient_map.addNewIngredient(temp.getIngredient(), temp.getAmountNeeded());
 
         input.clear();

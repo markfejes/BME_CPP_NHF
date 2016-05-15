@@ -48,6 +48,25 @@ std::istream& operator>>(std::istream& is, Recipe& rhs_recipe)
 {
     //std::getline(is, rhs_recipe.name);
     //std::getline(is, rhs_recipe.description);
-    is >> rhs_recipe.ingredientsNeeded;
+    //is >> rhs_recipe.ingredientsNeeded;
+
+
+	std::stringstream input;
+	std::string inputStr;
+	IngredientPair temp;
+
+	while (std::getline(is, inputStr) && inputStr.length() > 0)
+	{
+		input.str(inputStr);
+
+		input >> temp;
+
+		rhs_recipe.addNewIngredient(temp.getIngredient(), temp.getAmountNeeded());
+
+		input.clear();
+		input.str(std::string());
+	}
+
+
     return is;
 }

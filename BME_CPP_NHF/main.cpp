@@ -13,6 +13,7 @@ int main()
 		RecipeBook::readSavedRefrigerator();
 		RecipeBook::readSavedRecipes();
 
+		//RecipeBook::getRecipe(0).cookSome(1);
 
         RecipeBook::writeRecipes(cout); 
         //cout << endl;
