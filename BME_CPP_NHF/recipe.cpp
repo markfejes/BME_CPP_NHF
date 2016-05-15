@@ -12,7 +12,7 @@ bool Recipe::canWeCookSome(int amount)
         throw err.str();
     }
 
-    for (auto i1 = ingredientsNeeded.begin(); i1 != ingredientsNeeded.end(); ++i1)
+    for (IngredientMap::iterator i1 = ingredientsNeeded.begin(); i1 != ingredientsNeeded.end(); ++i1)
     {
         if (i1->getIngredient()->isThereSome(i1->getAmountNeeded() * amount) == false)
         {
@@ -33,7 +33,7 @@ void Recipe::cookSome(int amount)
         throw err.str();
     }
 
-    for (auto i1 = ingredientsNeeded.begin(); i1 != ingredientsNeeded.end(); ++i1)
+    for (IngredientMap::iterator i1 = ingredientsNeeded.begin(); i1 != ingredientsNeeded.end(); ++i1)
     {
         i1->getIngredient()->takeSome(i1->getAmountNeeded());
     }

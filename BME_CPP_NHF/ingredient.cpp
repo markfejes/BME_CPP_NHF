@@ -1,3 +1,4 @@
+
 #include <cmath>
 #include <sstream>
 #include "memtrace.h"
@@ -24,7 +25,7 @@ void Ingredient::takeSome(double amount)
     {
         std::stringstream err;
         err << "There is not enough of " << name << " to take!";
-        throw err;
+        throw err.str();
     }
 }
 
@@ -43,22 +44,22 @@ bool Ingredient::operator!=(const Ingredient& rhs_ingredient) const
     return (this->unit != rhs_ingredient.unit || this->name != rhs_ingredient.name);
 }
 
-std::ostream& operator<<(std::ostream& os, Ingredient* rhs_ingredient)
+std::ostream& operator<<(std::ostream& os, Ingredient& rhs_ingredient)
 {
-    os << rhs_ingredient->name << ingredient_sep << rhs_ingredient->inStock << ingredient_sep << rhs_ingredient->unit << ingredient_sep;
+    os << rhs_ingredient.name << ingredient_sep << rhs_ingredient.inStock << ingredient_sep << rhs_ingredient.unit << ingredient_sep;
 
     return os;
 }
 
-std::istream& operator>>(std::istream& is, Ingredient* rhs_ingredient)
+std::istream& operator>>(std::istream& is, Ingredient& rhs_ingredient)
 {
     std::string inStock;
 
-    std::getline(is, rhs_ingredient->name, ingredient_sep);
+    std::getline(is, rhs_ingredient.name, ingredient_sep);
     std::getline(is, inStock, ingredient_sep);
-    std::getline(is, rhs_ingredient->unit, ingredient_sep);
+    std::getline(is, rhs_ingredient.unit, ingredient_sep);
 
-    rhs_ingredient->inStock = atof(inStock.c_str());
+    rhs_ingredient.inStock = atof(inStock.c_str());
 
     return is;
 }

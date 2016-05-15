@@ -1,9 +1,10 @@
 #pragma once
 
+#include <stdexcept>
 #include "ingredient.h"
 #include "ingredientPair.h"
 
-/*std::map alapu tarolo osszetevoknek*/
+/**std::map alapu tarolo osszetevoknek*/
 class IngredientMap
 {
     IngredientPair* ingredientMap;
@@ -22,7 +23,7 @@ public:
         return iterator(*this, sizeOfMap);
     }
 
-    IngredientMap() : ingredientMap(nullptr), sizeOfMap(0) {}
+    IngredientMap() : ingredientMap(0), sizeOfMap(0) {}
 
     ~IngredientMap()
     {
@@ -34,18 +35,18 @@ public:
         return sizeOfMap == 0;
     }
 
-    /* Uj paros hozzaadasa */
+    /** Uj paros hozzaadasa */
     void addNewIngredient (Ingredient* ingredient, double amount);
     
-    IngredientPair& operator[](int index);
+    IngredientPair& operator[](size_t index);
 
-    /* Standard iterator a hozzavalok konnyebb listazasa erdekeben*/
+    /** Standard iterator a hozzavalok konnyebb listazasa erdekeben*/
     class iterator
     {
         IngredientPair *p, *pe;
 
     public:
-        iterator() : p(nullptr), pe(nullptr) {};
+        iterator() : p(0), pe(0) {};
 
         iterator(IngredientMap& curr, size_t size = 0) : p(curr.ingredientMap + size), pe(curr.ingredientMap + curr.sizeOfMap) {};
         
@@ -73,4 +74,10 @@ public:
 
     };
 
+    friend std::ostream& operator<<(std::ostream& os, IngredientMap& rhs_ingredient_map);
+    friend std::istream& operator>>(std::istream& is, IngredientMap& rhs_ingredient_map);
+
 };
+/** Read/write */
+std::ostream& operator<<(std::ostream& os, IngredientMap& rhs_ingredient_map);
+std::istream& operator>>(std::istream& is, IngredientMap& rhs_ingredient_map);
