@@ -8,7 +8,6 @@
 
 void IngredientMap::addNewIngredient(Ingredient ingredient, double amount)
 {
-	std::cout << "halihó!" << std::endl << ingredient << std::endl;
     IngredientPair* tempArray = new IngredientPair[this->sizeOfMap + 1];
 
     for (size_t i = 0; i < sizeOfMap; i++)
@@ -18,7 +17,6 @@ void IngredientMap::addNewIngredient(Ingredient ingredient, double amount)
 
     tempArray[this->sizeOfMap].setIngredient(ingredient);
     tempArray[this->sizeOfMap].setAmountNeeded(amount);
-
     delete[] this->ingredientMap;
     ingredientMap = tempArray;
 	sizeOfMap++;
@@ -47,18 +45,18 @@ std::istream& operator>>(std::istream& is, IngredientMap& rhs_ingredient_map)
     std::string inputStr;
     IngredientPair temp;
 
-    while (std::getline(is, inputStr) && inputStr.length() > 0)
+    while (std::getline(is, inputStr) && inputStr.length() > 1)
     {
         input.str(inputStr);
 
         input >> temp;
-
+		//std::cout << "here: " << __FILE__ << ":" << __LINE__ << std::endl;
         rhs_ingredient_map.addNewIngredient(temp.getIngredient(), temp.getAmountNeeded());
-
+		//std::cout << "here: " << __FILE__ << ":" << __LINE__ << std::endl;
         input.clear();
         input.str(std::string());
     }
-
+	//std::cout << "here: " << __FILE__ << ":" << __LINE__ << std::endl;
 
     return is;
 }

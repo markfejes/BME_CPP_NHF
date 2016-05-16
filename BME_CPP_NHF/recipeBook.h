@@ -21,7 +21,7 @@ public:
 	static Recipe& getRecipe(size_t index);
 
 	/** Letrehoz egy uj receptet a memoriaba */
-	static Recipe & addNewRecipe(std::string name = "", std::string description = "");
+	static void addNewRecipe(std::string name = "", std::string description = "");
 
     /**Getter a statikus fridge-hez */
     static Refrigerator& getFridge()

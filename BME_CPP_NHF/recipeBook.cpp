@@ -14,7 +14,7 @@ Recipe& RecipeBook::getRecipe(size_t index)
 	return recipes[index];
 }
 
-Recipe& RecipeBook::addNewRecipe(std::string name, std::string description)
+void RecipeBook::addNewRecipe(std::string name, std::string description)
 {
 	if (allocatedSize == numberOfRecipes)
 	{
@@ -30,7 +30,7 @@ Recipe& RecipeBook::addNewRecipe(std::string name, std::string description)
 		recipes = tempArray;
 	}
 
-	return recipes[numberOfRecipes++] = Recipe(name, description);
+	recipes[numberOfRecipes++] = Recipe(name, description);
 }
 
 void RecipeBook::readSavedRefrigerator()
@@ -79,7 +79,9 @@ void RecipeBook::readRecipes(std::istream& is)
         std::getline(is, name);
         std::getline(is, desc);
 
-        is >> (addNewRecipe(name, desc));
+        addNewRecipe(name, desc);
+
+		is >> recipes[numberOfRecipes - 1];
     }
 }
 
