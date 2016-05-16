@@ -1,8 +1,10 @@
+
 #include <iostream>
 #include "memtrace.h"
 #include "recipe.h"
 #include "recipeBook.h"
-
+#include "menu.hpp"
+#include "utils.hpp"
 
 using namespace std;
 
@@ -13,10 +15,7 @@ int main()
 		RecipeBook::readSavedRefrigerator();
 		RecipeBook::readSavedRecipes();
 
-		//RecipeBook::getRecipe(0).cookSome(1);
-
-        RecipeBook::writeRecipes(cout); 
-        //cout << endl;
+		Menu::initMenu();
 
 		RecipeBook::saveRecipes();
 		RecipeBook::saveRefrigerator();

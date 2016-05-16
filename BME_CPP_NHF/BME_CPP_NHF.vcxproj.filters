@@ -62,6 +62,12 @@
     <ClInclude Include="refrigerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="menu.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

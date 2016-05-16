@@ -165,9 +165,11 @@
     <ClInclude Include="ingredientMap.h" />
     <ClInclude Include="ingredientPair.h" />
     <ClInclude Include="memtrace.h" />
+    <ClInclude Include="menu.hpp" />
     <ClInclude Include="recipe.h" />
     <ClInclude Include="recipeBook.h" />
     <ClInclude Include="refrigerator.h" />
+    <ClInclude Include="utils.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

@@ -1,5 +1,5 @@
 #pragma once
-
+#include <stdexcept>
 #include "ingredient.h"
 #ifndef ingredient_sep
 #define ingredient_sep ';'
@@ -25,6 +25,18 @@ public:
     {
         delete[] ingredientArray;
     }
+
+	size_t getNumberOfIngredients() const
+	{
+		return numberOfIngredients;
+    }
+
+	Ingredient& operator[](size_t index) const
+	{
+		if (index > numberOfIngredients) throw std::out_of_range("Hibás index!");
+		return ingredientArray[index];
+    }
+
     /**Visszaadja a keresett osszetevore mutato pointert */
     Ingredient* getIngredient(Ingredient ingredientIn);
     Ingredient* getIngredient(std::string name, std::string unit);
