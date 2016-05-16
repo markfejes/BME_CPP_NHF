@@ -4,9 +4,14 @@
 #include "refrigerator.h"
 #include "recipeBook.h"
 
-std::ostream& operator<<(std::ostream& os, IngredientPair & rhs_IP)
+void IngredientPair::setIngredient(Ingredient& ingredient_in)
 {
-    os << *rhs_IP.getIngredient() << rhs_IP.amount;
+	ingredient = RecipeBook::getFridge().getIngredient(ingredient_in);
+}
+
+std::ostream& operator<<(std::ostream& os, IngredientPair& rhs_IP)
+{
+    os << *RecipeBook::getFridge().getIngredient(rhs_IP.getIngredient()) << rhs_IP.amount;
     return os;
 }
 

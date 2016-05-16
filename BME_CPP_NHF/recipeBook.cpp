@@ -7,7 +7,7 @@
 Refrigerator RecipeBook::fridge = Refrigerator();
 size_t       RecipeBook::allocatedSize = 10;
 size_t       RecipeBook::numberOfRecipes = 0;
-Recipe*      RecipeBook::recipes = new Recipe[allocatedSize];
+Recipe*      RecipeBook::recipes = new Recipe[RecipeBook::allocatedSize];
 
 Recipe& RecipeBook::getRecipe(size_t index)
 {

@@ -17,7 +17,7 @@ public:
     bool canWeCookSome(int amount = 1);
 
     /** Uj osszetevo paros hozzaadasa */
-    void addNewIngredient(Ingredient* ingredient, double amountNeeded)
+    void addNewIngredient(Ingredient& ingredient, double amountNeeded)
     {
         this->ingredientsNeeded.addNewIngredient(ingredient, amountNeeded);
     }

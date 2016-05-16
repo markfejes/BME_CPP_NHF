@@ -6,16 +6,14 @@
 #include "ingredientPair.h"
 #include "ingredientMap.h"
 
-void IngredientMap::addNewIngredient(Ingredient* ingredient, double amount)
+void IngredientMap::addNewIngredient(Ingredient ingredient, double amount)
 {
+	std::cout << "halihó!" << std::endl << ingredient << std::endl;
     IngredientPair* tempArray = new IngredientPair[this->sizeOfMap + 1];
 
-    if (sizeOfMap != 0)
+    for (size_t i = 0; i < sizeOfMap; i++)
     {
-        for (size_t i = 0; i < sizeOfMap; i++)
-        {
-            tempArray[i] = this->ingredientMap[i];
-        }
+        tempArray[i] = this->ingredientMap[i];
     }
 
     tempArray[this->sizeOfMap].setIngredient(ingredient);

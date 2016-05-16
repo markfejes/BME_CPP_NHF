@@ -36,7 +36,7 @@ public:
     }
 
     /** Uj paros hozzaadasa */
-    void addNewIngredient (Ingredient* ingredient, double amount);
+    void addNewIngredient (Ingredient ingredient, double amount);
     
     IngredientPair& operator[](size_t index);
 

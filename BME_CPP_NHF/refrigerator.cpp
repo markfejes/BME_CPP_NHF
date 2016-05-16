@@ -8,7 +8,7 @@ void Refrigerator::addNewIngredient(const std::string name, const std::string un
     {
         Ingredient* tempArray = new Ingredient[allocatedSize += 10];
 
-        for (size_t i = 0; i < allocatedSize; i++)
+        for (size_t i = 0; i < numberOfIngredients; i++)
         {
             tempArray[i] = ingredientArray[i];
         }
@@ -20,13 +20,11 @@ void Refrigerator::addNewIngredient(const std::string name, const std::string un
     ingredientArray[numberOfIngredients++] = Ingredient(name, unit, initAmount);
 
 }
-Ingredient* Refrigerator::getIngredient(Ingredient& ingredientIn)
+Ingredient* Refrigerator::getIngredient(Ingredient ingredientIn)
 {
-    Ingredient temp = ingredientIn;
-
     for (size_t i = 0; i < numberOfIngredients; i++)
     {
-        if (ingredientArray[i] == temp)
+        if (ingredientArray[i] == ingredientIn)
         {
             return &ingredientArray[i];
         }

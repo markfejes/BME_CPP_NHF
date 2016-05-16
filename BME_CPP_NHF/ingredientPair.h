@@ -12,16 +12,13 @@ public:
     {
         this->ingredient = ingredient_in;
     };
+	/** Beallitja az osszetevot */
+	void setIngredient(Ingredient& ingredient_in);
 
-	void setIngredient (Ingredient* ingredient_in)
-	{
-		ingredient = ingredient_in;
-	}
-
-    /** Visszaad egy modosithato pointert az osszetevore */
-    Ingredient*& getIngredient()
+	/** Visszaadja az osszetevot */
+    Ingredient getIngredient() const
     {
-        return ingredient;
+        return *ingredient;
     }
 
 	void setAmountNeeded (double amountNeeded)
@@ -30,7 +27,7 @@ public:
 	}
 
     /**Referencia a kello mennyisegre*/
-    double& getAmountNeeded()
+    double getAmountNeeded() const
     {
         return amount;
     }

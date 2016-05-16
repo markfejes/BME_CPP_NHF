@@ -1,6 +1,7 @@
 #include <sstream>
 #include "memtrace.h"
 #include "recipe.h"
+#include "recipeBook.h"
 
 
 bool Recipe::canWeCookSome(int amount)
@@ -14,7 +15,7 @@ bool Recipe::canWeCookSome(int amount)
 
     for (IngredientMap::iterator i1 = ingredientsNeeded.begin(); i1 != ingredientsNeeded.end(); ++i1)
     {
-        if (i1->getIngredient()->isThereSome(i1->getAmountNeeded() * amount) == false)
+        if (RecipeBook::getFridge().getIngredient(i1->getIngredient())->isThereSome(i1->getAmountNeeded() * amount) == false)
         {
             return false;
         }
@@ -34,7 +35,7 @@ void Recipe::cookSome(int amount)
 
     for (IngredientMap::iterator i1 = ingredientsNeeded.begin(); i1 != ingredientsNeeded.end(); ++i1)
     {
-        i1->getIngredient()->takeSome(i1->getAmountNeeded());
+		RecipeBook::getFridge().getIngredient(i1->getIngredient())->takeSome(i1->getAmountNeeded());
     }
 }
 
@@ -48,24 +49,24 @@ std::istream& operator>>(std::istream& is, Recipe& rhs_recipe)
 {
     //std::getline(is, rhs_recipe.name);
     //std::getline(is, rhs_recipe.description);
-    //is >> rhs_recipe.ingredientsNeeded;
+    is >> rhs_recipe.ingredientsNeeded;
 
 
-	std::stringstream input;
-	std::string inputStr;
-	IngredientPair temp;
+	//std::stringstream input;
+	//std::string inputStr;
+	//IngredientPair temp;
 
-	while (std::getline(is, inputStr) && inputStr.length() > 0)
-	{
-		input.str(inputStr);
+	//while (std::getline(is, inputStr) && inputStr.length() > 0)
+	//{
+	//	input.str(inputStr);
 
-		input >> temp;
+	//	input >> temp;
 
-		rhs_recipe.addNewIngredient(temp.getIngredient(), temp.getAmountNeeded());
+	//	rhs_recipe.addNewIngredient(temp.getIngredient(), temp.getAmountNeeded());
 
-		input.clear();
-		input.str(std::string());
-	}
+	//	input.clear();
+	//	input.str(std::string());
+	//}
 
 
     return is;

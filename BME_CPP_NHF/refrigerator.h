@@ -26,7 +26,7 @@ public:
         delete[] ingredientArray;
     }
     /**Visszaadja a keresett osszetevore mutato pointert */
-    Ingredient* getIngredient(Ingredient& ingredientIn);
+    Ingredient* getIngredient(Ingredient ingredientIn);
     Ingredient* getIngredient(std::string name, std::string unit);
 
 
