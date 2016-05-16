@@ -18,8 +18,8 @@ void IngredientMap::addNewIngredient(Ingredient* ingredient, double amount)
         }
     }
 
-    tempArray[this->sizeOfMap].getIngredient() = ingredient;
-    tempArray[this->sizeOfMap].getAmountNeeded() = amount;
+    tempArray[this->sizeOfMap].setIngredient(ingredient);
+    tempArray[this->sizeOfMap].setAmountNeeded(amount);
 
     delete[] this->ingredientMap;
     ingredientMap = tempArray;

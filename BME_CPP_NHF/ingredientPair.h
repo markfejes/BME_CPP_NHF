@@ -13,11 +13,21 @@ public:
         this->ingredient = ingredient_in;
     };
 
+	void setIngredient (Ingredient* ingredient_in)
+	{
+		ingredient = ingredient_in;
+	}
+
     /** Visszaad egy modosithato pointert az osszetevore */
     Ingredient*& getIngredient()
     {
         return ingredient;
     }
+
+	void setAmountNeeded (double amountNeeded)
+	{
+		amount = amountNeeded;
+	}
 
     /**Referencia a kello mennyisegre*/
     double& getAmountNeeded()
